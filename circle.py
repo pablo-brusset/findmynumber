@@ -22,20 +22,25 @@ def calculer_volume(rayon_cercle):
     return volume
 
 
-print('Que voulez-vous calculer ?')
-print('1. Circonférence')
-print('2. Aire')
-print('3. Volume')
-choix = input()
+while True:
 
-donnee = int(input('Quel est le rayon ? (en cm)'))
+    print('Que voulez-vous calculer ?')
+    print('1. Circonférence')
+    print('2. Aire')
+    print('3. Volume')
+    print('4. Quitter le programme')
 
-if choix == '1':
-    resultat = calculer_circonference(donnee)
-    print('La circonférence est', resultat, 'cm.')
-elif choix == '2':
-    resultat = calculer_aire(donnee)
-    print('L\'aire est', resultat, 'cm.')
-elif choix == '3':
-    resultat = calculer_volume(donnee)
-    print('Le volume est', resultat, 'cm.')
+    choix = input()
+    if choix == '4':
+        break
+    donnee = int(input('Quel est le rayon ? (en cm)'))
+
+    if choix == '1':
+        resultat = calculer_circonference(donnee)
+        print('La circonférence est', resultat, 'cm.')
+    elif choix == '2':
+        resultat = calculer_aire(donnee)
+        print('L\'aire est', resultat, 'cm.')
+    elif choix == '3':
+        resultat = calculer_volume(donnee)
+        print('Le volume est', resultat, 'cm.')
