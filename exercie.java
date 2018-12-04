@@ -8,7 +8,7 @@ public class exercie{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Saisissez votre prénom :");
 		String str = sc.nextLine();
-		System.out.println("Saisissez une chaine de caractere : " + str);
+		System.out.println("Salut"+ " " + str);
 		sc.close();	
 	}
 }
