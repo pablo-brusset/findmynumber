@@ -1,19 +1,21 @@
-package exercice;
+package exercice; // j'appel le package
 
-import java.util.Scanner;
-
+import java.util.Scanner; // j'import mon scanner pour répondre
 class usermultication {
 	public static void main(String[] args)
 	{
-		int n,c; 
-		System.out.println("Entré la table de votre choix ");
-		Scanner in=new Scanner(System.in);
-		n=in.nextInt();
-		System.out.println("Multiplication table of "+n+"is;=");
+		int saisieutilisateur,i; 
+		System.out.println("Enter your table choice");
 		
-		for (c=1;c<=10;c++)
+		Scanner in=new Scanner(System.in);
+		saisieutilisateur=in.nextInt();
+		
+		System.out.println("Multiplication table of "+saisieutilisateur);
+		
+		for(i=1;i<=10;i++) //Permet de signaler a mon opérateur de calculer que jusqu'à 10              		
 		{
-			System.out.println(n+"*"+c+"="+(n*c));
+			System.out.println(saisieutilisateur+"*"+i+"="+(saisieutilisateur*i));
+			in.close(); // Permet de fermer la saisie 
 		}
 	}
 }
